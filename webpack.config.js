@@ -11,19 +11,8 @@ module.exports = {
     rules: [
       {
         test: /\.m?js$/,
+        loader: 'babel-loader',
         exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              ['@babel/preset-env'],
-              {
-                modules: 'auto',
-                corejs: 3,
-              },
-            ],
-          },
-        },
       },
       {
         test: /\.s[ac]ss$/i,
