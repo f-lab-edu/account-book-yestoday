@@ -20,6 +20,5 @@ export default class SpendItemView {
         </div>
         `)
     );
-    console.log(this.$target);
   }
 }
