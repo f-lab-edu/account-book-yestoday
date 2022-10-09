@@ -9,7 +9,7 @@ export default class ChallengeMoneyView {
     this.render();
     this.$target.addEventListener('click', (e) => {
       this.$appMain.style.display = 'none';
-      this.$appChallengeInput.style.display = 'block';
+      this.$appChallengeInput.style.display = 'flex';
     });
   }
   render() {
