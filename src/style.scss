@@ -30,7 +30,8 @@ $font-normal: 500;
 }
 
 @media only screen and (max-width: 480px) {
-  #app {
+  // 메인 페이지
+  #app-main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -123,4 +124,6 @@ $font-normal: 500;
       color: #f8863c;
     }
   }
+
+  // 도전 금액 input 페이지
 }
