@@ -7,6 +7,8 @@ import SpendItemModel from './models/SpendItem.model';
 import SpendMoneyView from './views/main/SpendMoney.view';
 import SpendItemView from './views/main/SpendItem.view';
 
+import BackToMainButtonView from './views/main/BackToMainButton.view';
+
 // 메인페이지 - 도전 금액
 const challengeMondeyModel = new ChallengeMoneyModel();
 const challengeMoneyView = new ChallengeMoneyView({
@@ -28,3 +30,9 @@ const spendItemView = new SpendItemView({ model: spendItemModel });
 
 const $spendList = document.querySelector('.spend-list');
 $spendList.innerHTML += spendItemView.$target;
+
+// 도전 금액 입력 페이지 - 뒤로가기 버튼
+const backToMainButtonView = new BackToMainButtonView();
+
+const $headerChallengeInput = document.querySelector('.header-challenge-input');
+$headerChallengeInput.appendChild(backToMainButtonView.$target);
