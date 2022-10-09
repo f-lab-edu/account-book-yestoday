@@ -48,11 +48,12 @@ $font-normal: 500;
     justify-content: space-between;
     font-size: $font-large;
 
-    &__right > p {
+    &__right > p,
+    div {
       text-align: right;
     }
 
-    .today-challenge-money {
+    .challenge-money {
       color: #00c471;
     }
   }
