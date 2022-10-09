@@ -7,5 +7,34 @@
     <script type="module" src="./dist/bundle.js"></script>
     <title>Yestoday</title>
   </head>
-  <body></body>
+  <body>
+    <div id="app-main">
+      <header class="header">
+        <div class="header__left">
+          <p>안녕하세요,</p>
+          <p>재호님</p>
+        </div>
+        <div class="header__right">
+          <p>도전 금액</p>
+        </div>
+      </header>
+      <main class="main">
+        <div class="main__header">
+          <div>오늘</div>
+        </div>
+        <div class="main__body spend-list"></div>
+      </main>
+      <footer class="footer">
+        <div>어제</div>
+        <div class="yesterday-challenge-money">150,000 원</div>
+        <div class="yesterday-total-spend-money">85,000 원</div>
+      </footer>
+    </div>
+    <div id="app-challenge-input" style="display: none">
+      <header class="header-challenge-input"></header>
+      <main class="main-challenge-input"></main>
+      <footer class="footer-challenge-input"></footer>
+    </div>
+    <div id="app-item-input" style="display: none"></div>
+  </body>
 </html>

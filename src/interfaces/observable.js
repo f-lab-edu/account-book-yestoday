@@ -11,6 +11,7 @@ export default class Observable {
     );
   }
   notify(data) {
-    this._observers.forEach((observer) => observer(data));
+    // 여기서 subscriber는 함수
+    this._observers.forEach((subscriber) => subscriber(data));
   }
 }
