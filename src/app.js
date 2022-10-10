@@ -34,7 +34,7 @@ const $spendList = document.querySelector('.spend-list');
 $spendList.innerHTML += spendItemView.$target;
 
 // 도전 금액 입력 페이지 - 뒤로가기 버튼
-const backToMainButtonView = new BackToMainButtonView();
+const backToMainButtonView = new BackToMainButtonView('challenge-input');
 
 const $headerChallengeInput = document.querySelector('.header-challenge-input');
 $headerChallengeInput.appendChild(backToMainButtonView.$target);

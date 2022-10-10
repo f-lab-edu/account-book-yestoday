@@ -1,9 +1,9 @@
 export default class BackToMainButtonView {
-  constructor() {
+  constructor(targetApp) {
     this.$target = document.createElement('div');
     this.$target.className = 'back-to-main-button';
     this.$appMain = document.querySelector('#app-main');
-    this.$appChallengeInput = document.querySelector('#app-challenge-input');
+    this.$appTarget = document.querySelector(`#app-${targetApp}`);
     this.render();
   }
   render() {
@@ -12,6 +12,6 @@ export default class BackToMainButtonView {
   }
   hide() {
     this.$appMain.style.display = 'flex';
-    this.$appChallengeInput.style.display = 'none';
+    this.$appTarget.style.display = 'none';
   }
 }
