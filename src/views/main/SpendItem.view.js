@@ -3,6 +3,10 @@ export default class SpendItemView {
     this.model = model;
     this.model.subscribe(this.render.bind(this));
     this.$spendList = document.querySelector('.spend-list');
+    this.$spendList.addEventListener('dblclick', (event) => {
+      if (!event.target.classList.contains('spend-item')) return;
+      this.model.removeItem({ id: event.target.classList[1].split('-')[2] });
+    });
     this.render();
   }
   render() {

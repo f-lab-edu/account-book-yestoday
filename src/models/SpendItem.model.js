@@ -14,4 +14,8 @@ export default class SpendItemModel extends Observable {
     this.notify(this.items);
     this.id++;
   }
+  removeItem({ id }) {
+    this.items = this.items.filter((item) => item.id !== +id);
+    this.notify(this.items);
+  }
 }

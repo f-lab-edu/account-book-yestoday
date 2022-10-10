@@ -6,6 +6,8 @@ export default class ChallengeMoneyView {
     this.$appMain = document.querySelector('#app-main');
     this.$appItemInput = document.querySelector('#app-item-input');
     this.model.subscribe(this.render.bind(this));
+    this.$target.addEventListener('click', this.hideShow.bind(this));
+    this.$target.addEventListener('click', this.resetInput.bind(this));
     this.render();
   }
   render() {
@@ -13,8 +15,6 @@ export default class ChallengeMoneyView {
     const items = this.model.getItems();
     items.forEach((item) => (this.spendMoney += item.price));
     this.$target.innerHTML = `${this.spendMoney.toLocaleString()} 원`;
-    this.$target.addEventListener('click', this.hideShow.bind(this));
-    this.$target.addEventListener('click', this.resetInput.bind(this));
   }
   hideShow() {
     this.$appMain.style.display = 'none';
