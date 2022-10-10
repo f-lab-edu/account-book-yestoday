@@ -50,3 +50,5 @@ const inputButtonView = new InputButtonView({ model: challengeMondeyModel });
 
 const $footerChallengeInput = document.querySelector('.footer-challenge-input');
 $footerChallengeInput.appendChild(inputButtonView.$target);
+
+// 소비 품목 입력 페이지

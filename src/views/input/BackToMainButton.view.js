@@ -8,9 +8,9 @@ export default class BackToMainButtonView {
   }
   render() {
     this.$target.innerHTML = '<';
-    this.$target.addEventListener('click', this.hide.bind(this));
+    this.$target.addEventListener('click', this.hideShow.bind(this));
   }
-  hide() {
+  hideShow() {
     this.$appMain.style.display = 'flex';
     this.$appTarget.style.display = 'none';
   }
