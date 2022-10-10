@@ -10,7 +10,7 @@ export default class ChallengeInputButtonView {
   }
   render() {
     this.$target.addEventListener('click', this.saveState.bind(this));
-    this.$target.addEventListener('click', this.hide.bind(this));
+    this.$target.addEventListener('click', this.hideShow.bind(this));
   }
   saveState() {
     const $input = document.querySelector('.main-challenge-input > input');
@@ -18,7 +18,7 @@ export default class ChallengeInputButtonView {
       Number($input.value.replace('원', '').split(',').join('').trim())
     );
   }
-  hide() {
+  hideShow() {
     this.$appMain.style.display = 'flex';
     this.$appChallengeInput.style.display = 'none';
   }

@@ -151,7 +151,7 @@ $font-normal: 500;
     flex-direction: column;
     justify-content: flex-start;
 
-    p {
+    > p {
       font-size: $font-large;
       color: $color-green;
       margin: 1rem 0;

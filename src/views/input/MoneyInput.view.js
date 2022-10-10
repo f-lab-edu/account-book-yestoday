@@ -7,14 +7,14 @@ export default class MoneyInputView {
   }
 
   render() {
-    this.$target.addEventListener('blur', this.blurHandler.bind(this));
-    this.$target.addEventListener('click', this.clickHandler.bind(this));
+    this.$target.addEventListener('blur', this.handleBlur.bind(this));
+    this.$target.addEventListener('click', this.handleClick.bind(this));
   }
 
-  blurHandler() {
+  handleBlur() {
     this.$target.value = Number(this.$target.value).toLocaleString() + ' 원';
   }
-  clickHandler() {
+  handleClick() {
     if (this.$target.value === '') return;
     this.$target.value = this.$target.value.replace('원', '');
     this.$target.value = this.$target.value.split(',').join('').trim();
