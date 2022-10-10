@@ -8,6 +8,7 @@ import SpendMoneyView from './views/main/SpendMoney.view';
 import SpendItemView from './views/main/SpendItem.view';
 
 import BackToMainButtonView from './views/main/BackToMainButton.view';
+import MoneyInputView from './views/main/MoneyInput.view';
 
 // 메인페이지 - 도전 금액
 const challengeMondeyModel = new ChallengeMoneyModel();
@@ -36,3 +37,9 @@ const backToMainButtonView = new BackToMainButtonView();
 
 const $headerChallengeInput = document.querySelector('.header-challenge-input');
 $headerChallengeInput.appendChild(backToMainButtonView.$target);
+
+// 도전 금액 입력 페이지 - 금액 input
+const moneyInputView = new MoneyInputView();
+
+const $mainChallengeInput = document.querySelector('.main-challenge-input');
+$mainChallengeInput.appendChild(moneyInputView.$target);

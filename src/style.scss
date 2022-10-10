@@ -24,7 +24,7 @@ $font-normal: 500;
 }
 
 @media only screen and (min-width: 481px) {
-  #app {
+  body {
     display: none;
   }
 }
@@ -167,6 +167,8 @@ $font-normal: 500;
 
       &::placeholder {
         color: $color-green;
+        opacity: 30%;
+        font-weight: $font-bold;
       }
     }
   }
