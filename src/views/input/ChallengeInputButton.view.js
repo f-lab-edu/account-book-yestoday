@@ -1,4 +1,4 @@
-export default class InputButtonView {
+export default class ChallengeInputButtonView {
   constructor({ model }) {
     this.$target = document.createElement('div');
     this.$target.className = 'input-button';
@@ -13,9 +13,9 @@ export default class InputButtonView {
     this.$target.addEventListener('click', this.hide.bind(this));
   }
   saveState() {
-    const input = document.querySelector('.main-challenge-input > input');
+    const $input = document.querySelector('.main-challenge-input > input');
     this.model.setMoney(
-      Number(input.value.replace('원', '').split(',').join('').trim())
+      Number($input.value.replace('원', '').split(',').join('').trim())
     );
   }
   hide() {

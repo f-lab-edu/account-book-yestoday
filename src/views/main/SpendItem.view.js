@@ -1,11 +1,12 @@
 export default class SpendItemView {
   constructor({ model }) {
     this.model = model;
-    this.$target = ``;
     this.model.subscribe(this.render.bind(this));
+    this.$spendList = document.querySelector('.spend-list');
     this.render();
   }
   render() {
+    this.$target = ``;
     const items = this.model.getItems();
     items.forEach(
       (item) =>
@@ -17,8 +18,8 @@ export default class SpendItemView {
             item.id
           }">${item.price.toLocaleString()} 원
           </div>
-        </div>
-        `)
+        </div>`)
     );
+    this.$spendList.innerHTML = this.$target;
   }
 }
