@@ -21,6 +21,7 @@ $font-normal: 500;
   padding: 0;
   box-sizing: border-box;
   cursor: default;
+  user-select: none;
 }
 
 @media only screen and (min-width: 481px) {
