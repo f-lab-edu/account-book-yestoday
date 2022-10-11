@@ -3,7 +3,7 @@ import Observable from '../interfaces/observable';
 export default class ChallengeMoneyModel extends Observable {
   constructor() {
     super();
-    this.money = 100000;
+    this.money = 0;
   }
   getMoney() {
     return this.money;
