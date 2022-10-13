@@ -259,4 +259,77 @@ $font-normal: 500;
       font-size: $font-medium;
     }
   }
+
+  // 캘린더 페이지
+  #app-calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $color-white;
+    height: 40rem;
+    border-radius: 1.5rem;
+    padding: 1.5rem 1rem;
+    font-weight: $font-bold;
+  }
+
+  .header-calendar {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: $font-large;
+
+    &__right p {
+      text-align: right;
+    }
+  }
+
+  .main-calendar {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem 0;
+    padding: 1.5rem 1rem;
+    background-color: $color-gray;
+    border-radius: 1.5rem;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-size: $font-medium;
+      height: 10%;
+      color: $color-black;
+    }
+
+    &__body {
+      color: $color-black;
+      font-size: $font-small;
+      font-weight: $font-normal;
+      height: 90%;
+    }
+  }
+
+  .footer-calendar {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: $color-gray;
+    border-radius: 1.5rem;
+    font-size: $font-medium;
+
+    .month-total-challenge {
+      color: #00c471;
+      border-right: 0.2rem solid black;
+      padding-right: 1rem;
+    }
+
+    .month-total-spend {
+      color: #f8863c;
+    }
+  }
 }

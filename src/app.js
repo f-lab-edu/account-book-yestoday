@@ -81,3 +81,22 @@ const itemInputButtonView = new ItemInputButtonView({ model: spendItemModel });
 
 const $footerItemInput = document.querySelector('.footer-item-input');
 $footerItemInput.appendChild(itemInputButtonView.$target);
+
+// 메인 푸터 클릭 시 캘린더 뷰(추후 로직 바꿀 예정)
+const $appMain = document.querySelector('#app-main');
+const $appCalendar = document.querySelector('#app-calendar');
+const $mainFooter = document.querySelector('.footer');
+
+$mainFooter.addEventListener('click', () => {
+  $appMain.style.display = 'none';
+  $appCalendar.style.display = 'flex';
+});
+
+// 캘린더 뷰 페이지 - 뒤로가기 버튼
+const calendarBackButtonView = new BackToMainButtonView('calendar');
+
+const $headerCalendarRight = document.querySelector('.header-calendar__right');
+$headerCalendarRight.insertAdjacentElement(
+  'beforebegin',
+  calendarBackButtonView.$target
+);
